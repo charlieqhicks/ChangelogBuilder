@@ -1,8 +1,8 @@
 <?php
 
-require __DIR__ . '/ChangelogBuilder.php';
+require __DIR__ . '/../src/ChangelogBuilder.php';
 
-use Aws\Build\Changelog\ChangelogBuilder;
+use Changelog\ChangelogBuilder;
 
 $params = [];
 
@@ -12,8 +12,8 @@ $params['verbose'] = isset($option['v']) ? $option['v'] : true;
 
 $changelogBuilder = new ChangelogBuilder($params);
 
+## Build the Changelog File
 $changelogBuilder->buildChangelog();
 
-$changelogBuilder->fixEndpointFile();
-
+## Clean the nextrelease folder with applied changlog blurbs
 $changelogBuilder->cleanNextReleaseFolder();
