@@ -1,5 +1,5 @@
 {
-    "name": "imshashank/ChangelogBuilder",
+    "name": "imshashank/changelog-builder",
     "homepage": "https://github.com/imshashank/ChangelogBuilder",
     "description": "ChangelogBuilder automation using PHP",
     "keywords": ["aws","amazon","sdk","php","changelog","autoamtion"],
