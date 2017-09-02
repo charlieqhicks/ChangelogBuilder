@@ -1,8 +1,8 @@
 {
-    "name": "aws/aws-sdk-php",
-    "homepage": "http://aws.amazon.com/sdkforphp",
-    "description": "AWS SDK for PHP - Use Amazon Web Services in your PHP project",
-    "keywords": ["aws","amazon","sdk","s3","ec2","dynamodb","cloud","glacier"],
+    "name": "imshashank/ChangelogBuilder",
+    "homepage": "https://github.com/imshashank/ChangelogBuilder",
+    "description": "ChangelogBuilder automation using PHP",
+    "keywords": ["aws","amazon","sdk","php","changelog","autoamtion"],
     "type": "library",
     "license": "Apache-2.0",
     "authors": [
