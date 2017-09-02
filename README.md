@@ -1,6 +1,6 @@
 # Changelog Builder
 
-[![Total Downloads](https://img.shields.io/packagist/dt/aws/aws-sdk-php.svg?style=flat)](https://packagist.org/packages/imshashank/ChangelogBuilder)
+[![Total Downloads](https://img.shields.io/packagist/dt/imshashank/ChangelogBuilder.svg?style=flat)](https://packagist.org/packages/imshashank/ChangelogBuilder)
 [![Build Status](https://img.shields.io/travis/aws/aws-sdk-php.svg?style=flat)](https://travis-ci.org/imshashank/ChangelogBuilder)
 [![Apache 2 License](https://img.shields.io/packagist/l/aws/aws-sdk-php.svg?style=flat)](http://aws.amazon.com/apache-2-0/)
 [![codecov](https://codecov.io/gh/aws/aws-sdk-php/branch/master/graph/badge.svg)](https://codecov.io/gh/imshashank/ChangelogBuilder)
