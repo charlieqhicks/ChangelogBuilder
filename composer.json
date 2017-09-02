@@ -1,0 +1,35 @@
+{
+    "name": "aws/aws-sdk-php",
+    "homepage": "http://aws.amazon.com/sdkforphp",
+    "description": "AWS SDK for PHP - Use Amazon Web Services in your PHP project",
+    "keywords": ["aws","amazon","sdk","s3","ec2","dynamodb","cloud","glacier"],
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Shashank Agarwal",
+            "homepage": "http://shashank.pw"
+        }
+    ],
+    "support": {
+        "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
+        "issues": "https://github.com/aws/aws-sdk-php/issues"
+    },
+    "require": {
+        "php": ">=5.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8.35|^5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aws\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aws\\Test\\": "tests/"
+        },
+        "classmap": ["src/"]
+    }
+}

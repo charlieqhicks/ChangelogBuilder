@@ -1,0 +1,13 @@
+*.phar
+*.zip
+phpunit.xml
+phpunit.functional.xml
+/Config
+/Makefile
+.idea
+.DS_Store
+.swp
+.build
+composer.lock
+vendor
+docs/_build
