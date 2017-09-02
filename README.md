@@ -1,9 +1,8 @@
 # Changelog Builder
 
-[![Total Downloads](https://img.shields.io/packagist/dt/imshashank/ChangelogBuilder.svg?style=flat)](https://packagist.org/packages/imshashank/ChangelogBuilder)
 [![Build Status](https://img.shields.io/travis/aws/aws-sdk-php.svg?style=flat)](https://travis-ci.org/imshashank/ChangelogBuilder)
 [![Apache 2 License](https://img.shields.io/packagist/l/aws/aws-sdk-php.svg?style=flat)](http://aws.amazon.com/apache-2-0/)
-[![codecov](https://codecov.io/gh/aws/aws-sdk-php/branch/master/graph/badge.svg)](https://codecov.io/gh/imshashank/ChangelogBuilder)
+[![codecov](https://codecov.io/gh/imshashank/ChangelogBuilder/branch/master/graph/badge.svg)](https://codecov.io/gh/imshashank/ChangelogBuilder)
 
 The Changelog Builder automatically processes all changelog entries. Each pull request is required to have a changelog JSON blob as part of the request. The system also calculates the next version for the package based on the type of the changes that are defined in the given changelog JSON blob.
 
