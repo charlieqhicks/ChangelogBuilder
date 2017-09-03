@@ -2,7 +2,7 @@
 
 ## next release
 
-* `Aws\` - Initial Release
+* `ChangelogBuilder` - Initial Release
 
 ## 0.0.0 - 09-02-17
 

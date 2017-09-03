@@ -28,7 +28,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Aws\\Test\\": "tests/"
+            "Test\\": "tests/"
         },
         "classmap": ["src/"]
     }
