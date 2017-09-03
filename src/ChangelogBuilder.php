@@ -15,6 +15,9 @@ class ChangelogBuilder
     /** @var string */
     private $baseDir;
 
+    /** @var string */
+    private $prefix;
+
     /** @var boolean */
     private $newServiceFlag = false;
 
@@ -37,6 +40,7 @@ class ChangelogBuilder
             ? $params['release_notes_output_dir']
             : '';
         $this->verbose = isset($params['verbose']) ? $params['verbose'] : false;
+        $this->prefix = isset($params['prefix']) ? $params['prefix'] : false;
     }
 
     public function isNewService()
@@ -115,7 +119,9 @@ class ChangelogBuilder
         self::setTimezone('America/Los_Angeles');
         $content = "# CHANGELOG\n\n## 0.0.0 - " 
         . date("m-d-y") 
-        . "\n\n* `` - Add `ChangelogBuilder` to the repository \n\n";
+        . "\n\n* `" 
+        . $this->prefix
+        ."\` - Add `ChangelogBuilder` to the repository \n\n";
         $fp = fopen($changelogFile,"wb");
         fwrite($fp,$content);
         fclose($fp);
@@ -152,7 +158,7 @@ class ChangelogBuilder
     private function writeToChangelog($changelog, $changelogFile)
     {
         if (!file_exists($changelogFile)) {
-            throw new \InvalidArgumentException('Changelog File Not Found', 2);
+            self::createChangelogFile($changelogFile);
         }
         $newChangeLog = "## next release\n\n" . $changelog . "\n";
         $lines = file($changelogFile);
@@ -178,7 +184,7 @@ class ChangelogBuilder
         });
         $str = "";
         foreach ($changelog as $log) {
-            $str .= "* `" . $log->category . "` - " . $log->description . "\n";
+            $str .= "* `$this->prefix\\" . $log->category . "` - " . $log->description . "\n";
         }
         return $str;
     }
@@ -198,5 +204,7 @@ class ChangelogBuilder
             echo "$ChangelogUpdate";
         }
         $this->writeToChangelog($ChangelogUpdate, $this->releaseNotesOutputDir . 'CHANGELOG.md');
+
+        return $tag;
     }
 }
