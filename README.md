@@ -1,6 +1,6 @@
 # Changelog Builder
 
-[![Build Status](https://img.shields.io/travis/aws/aws-sdk-php.svg?style=flat)](https://travis-ci.org/imshashank/ChangelogBuilder)
+[![Build Status](https://img.shields.io/travis/imshashank/ChangelogBuilder.svg?style=flat)](https://travis-ci.org/imshashank/ChangelogBuilder)
 [![codecov](https://codecov.io/gh/imshashank/ChangelogBuilder/branch/master/graph/badge.svg)](https://codecov.io/gh/imshashank/ChangelogBuilder)
 
 The Changelog Builder automatically processes all changelog entries. Each pull request is required to have a changelog JSON blob as part of the request. The system also calculates the next version for the package based on the type of the changes that are defined in the given changelog JSON blob.
@@ -17,12 +17,12 @@ The following is a sample changelog blob.
         }
     ]
 
-Each changelog blob is required to define the “type”, “category”, and “description” fields. The “category” explains the service that the change is associated with. For SDK changes that are not related to any service, the category field is left as an empty string. The “description” field should contain one or two sentences detailing the changes.
+Each changelog blob is required to define the “type”, “category”, and “description” fields. The “category” explains the service that the change is associated with. For release changes that are not related to any service, the category field is left as an empty string. The “description” field should contain one or two sentences detailing the changes.
 
 The “type” field describes the scope of the change being proposed. This field helps the Changelog Builder decide if a minor version bump is needed. The “type” field is assigned one of the following values:
 
-- feature: A major change to the SDK that will cause a minor version bump. A feature will open a new use case or significantly improve -upon an existing one. The update will result in a minor version bump. Example: a new service.
-- enhancement: A small update to the code. This should not cause any code to break and should only enhance given functionality of the SDK. The update will result in a patch version update. Example: Documentation Update.
+- feature: A major change to the release that will cause a minor version bump. A feature will open a new use case or significantly improve -upon an existing one. The update will result in a minor version bump. Example: a new service.
+- enhancement: A small update to the code. This should not cause any code to break and should only enhance given functionality of the release. The update will result in a patch version update. Example: Documentation Update.
 - bugfix: A fix in the code that has caused some unwanted behavior. The update will result in a patch version update.
 The changelog blob that will be included in the next release must be put inside the .changes/nextrelease folder. The changelog blob file name must be unique in that folder. A good practice is to give a descriptive name to the changelog blob file related to the request.
 
