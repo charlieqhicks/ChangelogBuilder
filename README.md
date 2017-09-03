@@ -2,6 +2,9 @@
 
 [![Build Status](https://img.shields.io/travis/imshashank/ChangelogBuilder.svg?style=flat)](https://travis-ci.org/imshashank/ChangelogBuilder)
 [![codecov](https://codecov.io/gh/imshashank/ChangelogBuilder/branch/master/graph/badge.svg)](https://codecov.io/gh/imshashank/ChangelogBuilder)
+[![Latest Stable Version](https://poser.pugx.org/imshashank/changelog-builder/version)](https://packagist.org/packages/imshashank/changelog-builder)
+[![Total Downloads](https://poser.pugx.org/imshashank/changelog-builder/downloads)](https://packagist.org/packages/imshashank/changelog-builder)
+[![License](https://poser.pugx.org/imshashank/changelog-builder/license)](https://packagist.org/packages/imshashank/changelog-builder)
 
 The Changelog Builder automatically processes all changelog entries. Each pull request is required to have a changelog JSON blob as part of the request. The system also calculates the next version for the package based on the type of the changes that are defined in the given changelog JSON blob.
 
