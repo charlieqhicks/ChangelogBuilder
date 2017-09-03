@@ -4,6 +4,8 @@ require __DIR__ . '/../src/ChangelogBuilder.php';
 
 use Changelog\ChangelogBuilder;
 
+date_default_timezone_set('America/Los_Angeles');
+
 $params = [];
 
 $options = getopt('v');

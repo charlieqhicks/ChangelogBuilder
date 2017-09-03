@@ -11,6 +11,11 @@ class ChangelogBuilderTest extends \PHPUnit_Framework_TestCase
 
     private $RESOURCE_DIR = "tests/resources/";
 
+    public function setup()
+    {
+        date_default_timezone_set('America/Los_Angeles');
+    }
+
     /**
      * @expectedException \InvalidArgumentException
      */
