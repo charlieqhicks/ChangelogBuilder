@@ -130,7 +130,7 @@ class ChangelogBuilder
     private function createTag($changelogFile)
     {
         if (!file_exists($changelogFile)) {
-            throw new \InvalidArgumentException('Changelog File Not Found', 2);
+            self::createChangelogFile($changelogFile);
         }
         $lines = file($changelogFile);
         $tag = explode(".", explode(" ", $lines[2])[1]);
