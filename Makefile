@@ -19,6 +19,9 @@ help:
 	@echo "  release        to package the release and push it to GitHub. Must provide a TAG"
 	@echo "  full-release   to tag, package, and release the SDK. Provide TAG"
 
+change:
+	php build/build-changelog.php
 test:
 	vendor/bin/phpunit tests
+
 

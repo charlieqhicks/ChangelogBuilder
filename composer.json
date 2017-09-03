@@ -1,7 +1,7 @@
 {
     "name": "imshashank/changelog-builder",
     "homepage": "https://github.com/imshashank/ChangelogBuilder",
-    "description": "ChangelogBuilder automation using PHP",
+    "description": "ChangelogBuilder automation in PHP",
     "keywords": ["aws","amazon","sdk","php","changelog","autoamtion"],
     "type": "library",
     "license": "Apache-2.0",
@@ -28,7 +28,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Aws\\Test\\": "tests/"
+            "Test\\": "tests/"
         },
         "classmap": ["src/"]
     }

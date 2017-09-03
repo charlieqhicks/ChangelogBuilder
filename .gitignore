@@ -3,7 +3,6 @@
 phpunit.xml
 phpunit.functional.xml
 /Config
-/Makefile
 .idea
 .DS_Store
 .swp

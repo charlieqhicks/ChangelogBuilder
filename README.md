@@ -85,3 +85,12 @@ Next release version: 1.2.4
 A new file, with the name VERSION_NUMBER.json, will be created in the .changes folder with the contents of the JSON blob for the changelog. You can see the previous changelog JSON blobs here. If needed, we can reconstruct the CHANGELOG.md file using the JSON documents in the .changes folder.
 
 On a successful release, the changelog entries are written to the top of the CHANGELOG.md file. Then chag is used to tag the release and label the added release notes with the current version number.
+
+# Future Work
+- Create blank CHANGELOG.md if one does not exists for new repos
+- Add command `make change` to trigget Changelog Builder for next release
+- Integrate `chag` to this repo in one command
+- Add spelling & format cheker to Changelog Builder
+
+
+
