@@ -130,7 +130,7 @@ class ChangelogBuilder
     private function createTag($changelogFile)
     {
         if (!file_exists($changelogFile)) {
-            self::createChangelogFile($changelogFile);
+            throw new \InvalidArgumentException('Changelog File Not Found', 2);
         }
         $lines = file($changelogFile);
         $tag = explode(".", explode(" ", $lines[2])[1]);
@@ -158,7 +158,7 @@ class ChangelogBuilder
     private function writeToChangelog($changelog, $changelogFile)
     {
         if (!file_exists($changelogFile)) {
-            throw new \InvalidArgumentException('Changelog File Not Found', 2);
+            self::createChangelogFile($changelogFile);
         }
         $newChangeLog = "## next release\n\n" . $changelog . "\n";
         $lines = file($changelogFile);
@@ -184,7 +184,7 @@ class ChangelogBuilder
         });
         $str = "";
         foreach ($changelog as $log) {
-            $str .= "* $this->prefix\`" . $log->category . "` - " . $log->description . "\n";
+            $str .= "* `$this->prefix\\" . $log->category . "` - " . $log->description . "\n";
         }
         return $str;
     }
