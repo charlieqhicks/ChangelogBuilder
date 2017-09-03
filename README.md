@@ -13,10 +13,10 @@ The update simplifies the process of adding release notes to the CHANGELOG.md fi
 
 Install chag using
 
-'''
+```
 curl -s https://raw.githubusercontent.com/mtdowling/chag/master/install.sh | bash
 
-'''
+```
         
 
 ## Installing using composer
