@@ -6,6 +6,10 @@
 [![Total Downloads](https://poser.pugx.org/imshashank/changelog-builder/downloads)](https://packagist.org/packages/imshashank/changelog-builder)
 [![License](https://poser.pugx.org/imshashank/changelog-builder/license)](https://packagist.org/packages/imshashank/changelog-builder)
 
+## Ideology
+
+We believe each PR must be accompanied by an entry to the CHANGELOG.md. An up-to-date changelog helps in tracking which changes were merged in a given release. It also gives contributers their fair share and allows them to track in which release were their changes merged to the repository.
+
 The Changelog Builder automatically processes all changelog entries. Each pull request is required to have a changelog JSON blob as part of the request. The system also calculates the next version for the package based on the type of the changes that are defined in the given changelog JSON blob.
 
 The update simplifies the process of adding release notes to the CHANGELOG.md file for each pull request. Each merged pull request that was part of the release results in a new entry to the CHANGELOG.md file. The entry describes the change and provides the TAG number and release date.
