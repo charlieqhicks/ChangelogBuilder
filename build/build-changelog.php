@@ -10,10 +10,14 @@ $options = getopt('v');
 
 $params['verbose'] = isset($option['v']) ? $option['v'] : true;
 
+$params['prefix'] = 'ChangelogBuilder';
+
 $changelogBuilder = new ChangelogBuilder($params);
 
 ## Build the Changelog File
-$changelogBuilder->buildChangelog();
+$tag = $changelogBuilder->buildChangelog();
+
+shell_exec('chag update '. $tag);
 
 ## Clean the nextrelease folder with applied changlog blurbs
 $changelogBuilder->cleanNextReleaseFolder();

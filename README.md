@@ -7,6 +7,44 @@ The Changelog Builder automatically processes all changelog entries. Each pull r
 
 The update simplifies the process of adding release notes to the CHANGELOG.md file for each pull request. Each merged pull request that was part of the release results in a new entry to the CHANGELOG.md file. The entry describes the change and provides the TAG number and release date.
 
+## Dependencies
+
+`chag` is used to update the changelog version in CHANGELOG.md
+
+Install chag using
+
+'''
+curl -s https://raw.githubusercontent.com/mtdowling/chag/master/install.sh | bash
+
+'''
+        
+
+## Installing using composer
+
+Add the following to your composer file and then run `composer install`
+
+```
+{
+        "imshashank/changelog-builder": "*"
+}
+```
+
+## Using Changelog
+
+Create a new blurb in folder `.changes/nextrelease/`. The name of the json blrb should be unique in that folder.
+To create a new Changelog, just run the below command.
+
+```
+make change
+```
+
+## Running Tests
+
+Run the below command to run tests.
+
+```
+make test
+```
 The following is a sample changelog blob.
 
     [
