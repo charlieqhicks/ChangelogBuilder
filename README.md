@@ -88,8 +88,4 @@ On a successful release, the changelog entries are written to the top of the CHA
 
 # Future Work
 - Add command `make change` to trigget Changelog Builder for next release
-- Integrate `chag` to this repo in one command
-- Add spelling & format cheker to Changelog Builder
-
-
-
+- Add spelling & format checker to `ChangelogBuilder`
