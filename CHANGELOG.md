@@ -7,4 +7,3 @@
 ## 0.0.0 - 09-02-17
 
 * `ChangelogBuilder\` - Add `ChangelogBuilder` to the repository 
-
