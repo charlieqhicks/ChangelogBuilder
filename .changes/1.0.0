@@ -1,0 +1,12 @@
+[
+    {
+        "type": "enhancement",
+        "category": "ChangelogBuilder",
+        "description": "Add `major` change type to the ChangelogBuilder Class"
+    },
+    {
+        "type": "major",
+        "category": "",
+        "description": "Release V1 stable of Changelog Builder"
+    }
+]
