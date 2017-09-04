@@ -1,7 +1,7 @@
 <?php
 namespace Changelog\Test;
 
-use Changelog\ChangelogBuilder;
+use imshashank\Changelog\ChangelogBuilder;
 
 /**
  * @covers Changelog\ChangelogBuilder

@@ -1,5 +1,5 @@
 <?php
-namespace Changelog;
+namespace imshashank\Changelog;
 
 /**
  * @internal
