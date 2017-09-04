@@ -44,7 +44,7 @@ To create a new Changelog, just run the below command.
 ```
 <?php
 
-require __DIR__ . '/../src/ChangelogBuilder.php';
+require('vendor/autoload.php');
 
 use Changelog\ChangelogBuilder;
 
