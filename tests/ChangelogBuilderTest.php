@@ -1,5 +1,5 @@
 <?php
-namespace Test\Changelog;
+namespace Changelog\Test;
 
 use Changelog\ChangelogBuilder;
 
