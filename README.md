@@ -81,7 +81,7 @@ The following is a sample changelog blob.
 
     [
         {
-            "type"       : "feature|enhancement|bugfix",
+            "type"       : "major|feature|enhancement|bugfix",
             "category"   : "Target of Update",
             "description": "English language simple description of your update."
         }
@@ -91,6 +91,7 @@ Each changelog blob is required to define the “type”, “category”, and �
 
 The “type” field describes the scope of the change being proposed. This field helps the Changelog Builder decide if a minor version bump is needed. The “type” field is assigned one of the following values:
 
+- major: Release of a new version of the repo. This will bump the `major version` of the repository.
 - feature: A major change to the release that will cause a minor version bump. A feature will open a new use case or significantly improve -upon an existing one. The update will result in a minor version bump. Example: a new service.
 - enhancement: A small update to the code. This should not cause any code to break and should only enhance given functionality of the release. The update will result in a patch version update. Example: Documentation Update.
 - bugfix: A fix in the code that has caused some unwanted behavior. The update will result in a patch version update.

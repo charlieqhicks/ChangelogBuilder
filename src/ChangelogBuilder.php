@@ -20,11 +20,12 @@ class ChangelogBuilder
 
     /** @var boolean */
     private $newServiceFlag = false;
+    private $majorVersionUpdateFlag = false;
 
     const CHANGELOG_FEATURE = 'feature';
-    const CHANGELOG_API_CHANGE = 'api-change';
     const CHANGELOG_ENHANCEMENT = 'enhancement';
     const CHANGELOG_BUGFIX = 'bugfix';
+    const MAJOR_VERSION_UPDATE = 'major';
 
     /**
      *  The constructor requires following configure parameters:
@@ -72,6 +73,10 @@ class ChangelogBuilder
                 return $change->type === self::CHANGELOG_FEATURE;
             })) > 0;
 
+        $this->majorVersionUpdateFlag = count(array_filter($changelogEntries, function ($change) {
+                return $change->type === self::MAJOR_VERSION_UPDATE;
+            })) > 0;
+
         return $changelogEntries;
     }
 
@@ -105,15 +110,21 @@ class ChangelogBuilder
         if ($tag[0] == 'next') {
             throw new \InvalidArgumentException('Untagged changes exits in CHANGELOG.md', 1);
         }
-        if ($this->newServiceFlag) {
-            //Minor Version Bump if a newservice is being released
-            ++$tag[1];
+        if ($this->majorVersionUpdateFlag) {
+            ++$tag[0];
+            $tag[1] = 0;
             $tag[2] = 0;
             return implode(".", $tag);
         } else {
-            ++$tag[2];
-            return implode(".", $tag);
+            if ($this->newServiceFlag) {
+            //Minor Version Bump if a newservice is being released
+                ++$tag[1];
+                $tag[2] = 0;
+                return implode(".", $tag);
+            } 
         }
+        ++$tag[2];
+        return implode(".", $tag);
     }
 
     private function createChangelogJson($changelog, $tag)
