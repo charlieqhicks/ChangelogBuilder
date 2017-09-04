@@ -42,7 +42,32 @@ Create a new blurb in folder `.changes/nextrelease/`. The name of the json blrb 
 To create a new Changelog, just run the below command.
 
 ```
-make change
+<?php
+
+require __DIR__ . '/../src/ChangelogBuilder.php';
+
+use Changelog\ChangelogBuilder;
+
+date_default_timezone_set('America/Los_Angeles');
+
+$params = [];
+
+$options = getopt('v');
+
+$params['verbose'] = isset($option['v']) ? $option['v'] : true;
+
+$params['prefix'] = 'ChangelogBuilder';
+
+$changelogBuilder = new ChangelogBuilder($params);
+
+## Build the Changelog File
+$tag = $changelogBuilder->buildChangelog();
+
+## Tags the git repository with the generated tag
+shell_exec('chag update '. $tag);
+
+## Cleans the nextrelease folder
+$changelogBuilder->cleanNextReleaseFolder();
 ```
 
 ## Running Tests
